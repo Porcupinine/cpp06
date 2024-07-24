@@ -3,6 +3,7 @@ project(cpp06)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(cpp06 main.cpp
+add_executable(cpp06
         ex00/scalarConverter.cpp
-        ex00/scalarConverter.h)
+        ex00/scalarConverter.h
+        ex00/main.cpp)

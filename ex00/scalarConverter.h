@@ -22,7 +22,7 @@ class scalarConverter {
 		~scalarConverter() = delete;
 		scalarConverter(const scalarConverter& cp) = delete;
 		scalarConverter& operator=(const scalarConverter& cp) = delete;
-		static void convert (std::string x);
+		static void convert (std::string& x);
 };
 
 //TODO check overflow int
