@@ -8,13 +8,15 @@
 /*   Created: 2024/07/24 15:50:44 by lpraca-l      #+#    #+#                 */
 /*   Updated: 2024/07/24 15:50:44 by lpraca-l      ########   odam.nl         */
 /*                                                                            */
-#include <string>
-#include <iostream>
-
 /* ************************************************************************** */
 
-int main () {
-	std::string str = "42.0f";
-	float x = 42.0f;
-	std::cout<<"type: "<< typeid(x).name()<<"\n";
+#include <string>
+#include <iostream>
+#include "scalarConverter.h"
+
+int main (int argc, char **argv) {
+	if(argc != 2)
+		std::cout<<"Please insert value\n";
+	std::string value = argv[1];
+	scalarConverter::convert(value);
 }

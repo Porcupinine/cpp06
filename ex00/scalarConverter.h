@@ -25,6 +25,4 @@ class scalarConverter {
 		static void convert (std::string& x);
 };
 
-//TODO check overflow int
-
 #endif //CPP06_SCALARCONVERTER_H
