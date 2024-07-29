@@ -150,6 +150,10 @@ namespace {
 				copy[it] = '0';
 			}
 		}
+		if (allDigit(copy) && f == 0 && dot <= 0 && e <= 0 && signal <= 1) {
+			gotInt(x);
+			return;
+		}
 		if (allDigit(copy) && f == 1 && dot <= 2 && e <= 1 && signal <= 2) {
 			gotFloat(x);
 			return;

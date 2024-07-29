@@ -1,13 +1,25 @@
-//
-// Created by laura on 27-7-24.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   Serializer.h                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: laura <laura@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2024/07/27 13:54:45 by laura         #+#    #+#                 */
+/*   Updated: 2024/07/27 13:54:45 by laura         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef CPP06_SERIALIZER_H
 #define CPP06_SERIALIZER_H
 
-
 #include <cstdint>
-#include "Data.h"
+
+struct Data {
+	int n {42};
+	char c {'*'};
+	float f {42.2f};
+};
 
 class Serializer {
 public:

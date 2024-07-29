@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Serializer.cpp                                     :+:    :+:            */
+/*   Base.h                                             :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: laura <laura@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2024/07/27 13:54:37 by laura         #+#    #+#                 */
-/*   Updated: 2024/07/27 13:54:37 by laura         ########   odam.nl         */
+/*   Created: 2024/07/29 12:06:13 by laura         #+#    #+#                 */
+/*   Updated: 2024/07/29 12:06:13 by laura         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serializer.h"
+#ifndef CPP06_BASE_H
+#define CPP06_BASE_H
 
-uintptr_t Serializer::serialize(Data *ptr) {
-	return reinterpret_cast<uintptr_t>(ptr);
-}
 
-Data *Serializer::deserialize(uintptr_t raw) {
-	return reinterpret_cast<Data*>(raw);
-}
+class Base {
+public:
+	virtual ~Base() = default;
+};
+
+class A : public Base {};
+class B : public Base {};
+class C : public Base {};
+
+Base *generate();
+void identify(Base* p);
+void identify(Base& p);
+
+#endif //CPP06_BASE_H
